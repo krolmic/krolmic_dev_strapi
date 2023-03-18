@@ -1,6 +1,6 @@
 module.exports = ({ env }) => ({
     connection: {
-      client: "DATABASE_CLIENT",
+      client: env("DATABASE_CLIENT", ""),
       connection: {
         host: env("DATABASE_HOST", ""),
         port: env.int("DATABASE_PORT", 1234),
