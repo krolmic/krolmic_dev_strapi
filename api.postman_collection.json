@@ -1,0 +1,144 @@
+{
+	"info": {
+		"_postman_id": "6105d8b3-54b9-4998-9610-b8e856920e87",
+		"name": "api.krolmic.dev repo local",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23762333"
+	},
+	"item": [
+		{
+			"name": "Create message",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{API Token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"data\": {\n    \"name\": \"Max Mustermann\",\n    \"email\": \"max.mustermann@example.com\",\n    \"message\": \"Lorem ipsum sapientem ne neque dolor erat,eros solet invidunt duo Quisque aliquid leo. Pretium patrioque sociis eu nihil Cum enim ad, ipsum alii vidisse justo id. Option porttitor diam voluptua. Cu Eam augue dolor dolores quis, Nam aliquando elitr Etiam consetetur. Fringilla lucilius mel adipiscing rebum. Sit nulla Integer ad volumus, dicta scriptorem viderer lobortis est Utinam, enim commune corrumpit Aenean erat tellus. Metus sed amet dolore justo, gubergren sed.\"\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{API URL}}/messages",
+					"host": [
+						"{{API URL}}"
+					],
+					"path": [
+						"messages"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get article by slug",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{API Token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{API URL}}/articles?filters[slug][$eq]=simple-recipes-app-made-in-flutter-introduction&populate=*",
+					"host": [
+						"{{API URL}}"
+					],
+					"path": [
+						"articles"
+					],
+					"query": [
+						{
+							"key": "filters[slug][$eq]",
+							"value": "simple-recipes-app-made-in-flutter-introduction"
+						},
+						{
+							"key": "populate",
+							"value": "*"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all atricles",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{API Token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{API URL}}/articles?populate=*&pagination[page]=1&pagination[pageSize]=25",
+					"host": [
+						"{{API URL}}"
+					],
+					"path": [
+						"articles"
+					],
+					"query": [
+						{
+							"key": "populate",
+							"value": "*"
+						},
+						{
+							"key": "pagination[page]",
+							"value": "1"
+						},
+						{
+							"key": "pagination[pageSize]",
+							"value": "25"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "API Token",
+			"value": "8f743f8eb099ea9443b4d73f653bf27acfd478b53bdcccac609aa165dd1adc4649905db98fa818c70cefbfa8f0d8f401cea25d31b066c268d99008a5e78b1a886e71caa02bd8c8868f0f9a0bdf288fd190c75c16fc1c5bbd152b66de35eebff6514a5f01efab3c8d3524579a6a54d1a9c5e6b3ca39598354db6e3f78275d805c",
+			"type": "string"
+		},
+		{
+			"key": "API URL",
+			"value": "https://api.krolmic.dev/api",
+			"type": "string"
+		}
+	]
+}
