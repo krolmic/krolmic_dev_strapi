@@ -1,4 +1,25 @@
-# 🚀 Getting started with Strapi
+# 🤙 Strapi backend
+
+Strapi backend repository made for my website krolmic.dev.
+
+## 🔧 Setup
+
+- Copy [.env.example.local](./.env.example.local) or [.env.example.prod](./.env.example.prod) as .env before running the project. Change the values inside .env.
+- Run `yarn install` and `yarn build`.
+- Execute `yarn develop` locally or configure the machine Strapi is hosted on to execute `yarn start` to run the Strapi application.
+
+## 🕊 Postman collection
+
+- Import [api.postman_collection.json](./api.postman_collection.json).
+- Adapt the variables `API Token` and `API URL` for usage with a production instance.
+
+## 👩‍🔬 Commitment
+
+### Commits
+
+Follow [Semantic Commit Messages](https://gist.github.com/joshbuchea/6f47e86d2510bce28f8e7f42ae84c716#file-semantic-commit-messages-md).
+
+## 🚀 Strapi commands
 
 Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/developer-docs/latest/developer-resources/cli/CLI.html) (CLI) which lets you scaffold and manage your project in seconds.
 
@@ -31,27 +52,3 @@ npm run build
 # or
 yarn build
 ```
-
-## ⚙️ Deployment
-
-Strapi gives you many possible deployment options for your project. Find the one that suits you on the [deployment section of the documentation](https://docs.strapi.io/developer-docs/latest/setup-deployment-guides/deployment.html).
-
-## 📚 Learn more
-
-- [Resource center](https://strapi.io/resource-center) - Strapi resource center.
-- [Strapi documentation](https://docs.strapi.io) - Official Strapi documentation.
-- [Strapi tutorials](https://strapi.io/tutorials) - List of tutorials made by the core team and the community.
-- [Strapi blog](https://docs.strapi.io) - Official Strapi blog containing articles made by the Strapi team and the community.
-- [Changelog](https://strapi.io/changelog) - Find out about the Strapi product updates, new features and general improvements.
-
-Feel free to check out the [Strapi GitHub repository](https://github.com/strapi/strapi). Your feedback and contributions are welcome!
-
-## ✨ Community
-
-- [Discord](https://discord.strapi.io) - Come chat with the Strapi community including the core team.
-- [Forum](https://forum.strapi.io/) - Place to discuss, ask questions and find answers, show your Strapi project and get feedback or just talk with other Community members.
-- [Awesome Strapi](https://github.com/strapi/awesome-strapi) - A curated list of awesome things related to Strapi.
-
----
-
-<sub>🤫 Psst! [Strapi is hiring](https://strapi.io/careers).</sub>
